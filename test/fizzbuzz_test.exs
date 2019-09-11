@@ -64,11 +64,66 @@ defmodule FizzbuzzTest do
   end
 
   test "Sixteen" do
-    assert_raise ArgumentError, "Not in range!", fn ->
-      fizzbuzz(16) == 16
-    end
+    assert fizzbuzz(16) == 16
   end
 
+  test "Seventeen" do
+    assert fizzbuzz(17) == 17
+  end
+
+  test "Eighteen" do
+    assert fizzbuzz(18) == "Fizz"
+  end
+
+  test "Nineteen" do
+    assert fizzbuzz(19) == 19
+  end
+
+  test "Twenty" do
+    assert fizzbuzz(20) == "Buzz"
+  end
+
+  test "Twenty-one" do
+    assert fizzbuzz(21) == "Fizz"
+  end
+
+  test "Twenty-two" do
+    assert fizzbuzz(22) == 22
+  end
+
+  test "Twenty-three" do
+    assert fizzbuzz(23) == 23
+  end
+
+  test "Twenty-four" do
+    assert fizzbuzz(24) == "Fizz"
+  end
+
+  test "Twenty-five" do
+    assert fizzbuzz(25) == "Buzz"
+  end
+
+  test "Twenty-six" do
+    assert fizzbuzz(26) == 26
+  end
+
+  test "Twenty-seven" do
+    assert fizzbuzz(27) == "Fizz"
+  end
+
+  test "Twenty-eight" do
+    assert fizzbuzz(28) == 28
+  end
+
+  test "Twenty-nine" do
+    assert fizzbuzz(29) == 29
+  end
+
+  test "Thirty" do
+    assert fizzbuzz(30) == "FizzBuzz"
+  end
+
+  @tag :skip
   test "NAN" do
     assert fizzbuzz("15") == "NAN"
   end
