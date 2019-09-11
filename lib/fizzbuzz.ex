@@ -1,10 +1,10 @@
 defmodule Fizzbuzz do
   def fizzbuzz(input) do
-    cond do
-         rem(input, 15) == 0 -> "FizzBuzz"
-         rem(input, 3) == 0 -> "Fizz"
-         rem(input, 5) == 0 -> "Buzz"
-         true -> input
+    case {rem(input, 3), rem(input, 5)} do
+      {0, 0} -> "FizzBuzz"
+      {0, _} -> "Fizz"
+      {_, 0} -> "Buzz"
+      _ -> input
     end
   end
 end
