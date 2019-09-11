@@ -122,4 +122,8 @@ defmodule FizzbuzzTest do
   test "Thirty" do
     assert fizzbuzz(30) == "FizzBuzz"
   end
+
+  test "NAN" do
+    assert fizzbuzz("15") == "NAN"
+  end
 end
