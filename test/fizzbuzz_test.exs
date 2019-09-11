@@ -125,13 +125,15 @@ defmodule FizzbuzzTest do
 
   @tag :skip
   test "Sixteen arg error" do
-    assert_raise ArgumentError, "Throw frame should be in the 1-5 range", fn ->
+    assert_raise ArgumentError, "Not in range!", fn ->
       assert fizzbuzz(16)
     end
   end
 
   @tag :skip
   test "NAN" do
-    assert fizzbuzz("15") == "NAN"
+    assert_raise ArgumentError, "NAN", fn ->
+      assert fizzbuzz("15")
+    end
   end
 end
